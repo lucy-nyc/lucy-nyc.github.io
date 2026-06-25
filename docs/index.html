@@ -3,155 +3,141 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Test Maker — paste your notes, get a mock test</title>
-    <meta
-      name="description"
-      content="Test Maker turns class material into a mock test — multiple choice, true/false, and short answer, grounded in what you paste."
-    />
-    <!-- Open Graph: nice preview when the link is shared -->
-    <meta property="og:title" content="Test Maker" />
-    <meta
-      property="og:description"
-      content="Paste class material, get a mock test. Multiple choice, true/false, and short answer with answer keys."
-    />
+    <title>Lucy Yang — Software Engineer & Web Developer</title>
+    <meta name="description" content="Lucy Yang builds clean, useful web tools end-to-end. Featured project: Test Maker — turn class notes into a grounded practice exam." />
+    <meta property="og:title" content="Lucy Yang — Software Engineer & Web Developer" />
+    <meta property="og:description" content="I build small web tools that do one thing well. See Test Maker, live in production." />
     <meta property="og:type" content="website" />
-    <style>
-      :root {
-        --bg: #faf8f4;
-        --card: #ffffff;
-        --ink: #2c2a26;
-        --muted: #6b665c;
-        --accent: #b5563f;
-        --accent-ink: #ffffff;
-        --line: #e7e2d8;
-        --good: #3f7d52;
-      }
-      * { box-sizing: border-box; }
-      html { scroll-behavior: smooth; }
-      body {
-        margin: 0;
-        font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-          Helvetica, Arial, sans-serif;
-        color: var(--ink);
-        background: var(--bg);
-        -webkit-font-smoothing: antialiased;
-      }
-      .wrap { max-width: 880px; margin: 0 auto; padding: 0 20px; }
-
-      header { padding: 72px 0 40px; text-align: center; }
-      .badge {
-        display: inline-block;
-        font-size: 13px;
-        letter-spacing: 0.04em;
-        text-transform: uppercase;
-        color: var(--muted);
-        border: 1px solid var(--line);
-        background: var(--card);
-        border-radius: 999px;
-        padding: 5px 14px;
-        margin-bottom: 22px;
-      }
-      h1 {
-        font-size: clamp(34px, 6vw, 52px);
-        line-height: 1.1;
-        margin: 0 0 16px;
-        letter-spacing: -0.02em;
-      }
-      .tagline { font-size: clamp(17px, 2.4vw, 20px); color: var(--muted); margin: 0 auto 30px; max-width: 620px; }
-
-      .cta { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
-      .btn {
-        display: inline-block;
-        text-decoration: none;
-        font-weight: 600;
-        padding: 12px 22px;
-        border-radius: 10px;
-        border: 1px solid var(--line);
-        transition: transform 0.08s ease, box-shadow 0.15s ease;
-      }
-      .btn:active { transform: translateY(1px); }
-      .btn-primary { background: var(--accent); color: var(--accent-ink); border-color: var(--accent); }
-      .btn-primary:hover { box-shadow: 0 6px 18px rgba(181, 86, 63, 0.28); }
-      .btn-secondary { background: var(--card); color: var(--ink); }
-      .btn-secondary:hover { box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06); }
-
-      .video-card {
-        margin: 48px 0;
-        background: var(--card);
-        border: 1px solid var(--line);
-        border-radius: 16px;
-        padding: 14px;
-        box-shadow: 0 12px 40px rgba(0, 0, 0, 0.06);
-      }
-      .video-card video { width: 100%; border-radius: 9px; display: block; }
-
-      section { padding: 24px 0 8px; }
-      h2 { font-size: 22px; margin: 0 0 18px; letter-spacing: -0.01em; }
-      .features { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; }
-      .feature {
-        background: var(--card);
-        border: 1px solid var(--line);
-        border-radius: 12px;
-        padding: 18px 20px;
-      }
-      .feature h3 { margin: 0 0 6px; font-size: 16px; }
-      .feature p { margin: 0; color: var(--muted); font-size: 15px; }
-
-      footer { text-align: center; color: var(--muted); font-size: 14px; padding: 48px 0 64px; }
-      footer a { color: var(--accent); }
-    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="site.css" />
   </head>
   <body>
-    <div class="wrap">
-      <header>
-        <span class="badge">Study tool</span>
-        <h1>Turn your notes into a mock test</h1>
-        <p class="tagline">
-          Paste in class material — notes, a chapter, a study guide — and Test
-          Maker writes you a practice exam grounded strictly in what you gave it.
-        </p>
-        <div class="cta">
-          <a class="btn btn-primary" href="https://test-maker-murex.vercel.app/">Try it live →</a>
-        </div>
-      </header>
-
-      <div class="video-card">
-        <video controls preload="metadata" playsinline>
-          <source src="demo.mp4" type="video/mp4" />
-          Your browser can't play this video.
-          <a href="demo.mp4">Download it instead.</a>
-        </video>
+    <!-- NAV -->
+    <nav class="nav">
+      <a class="brand" href="index.html"><span class="brand-mark">L</span><b>Lucy Yang</b></a>
+      <div class="nav-links">
+        <a href="project.html">Work</a>
+        <a href="about.html">About</a>
+        <a class="cta" href="https://test-maker-murex.vercel.app/" target="_blank" rel="noopener">Live demo <span style="font-size:12px">↗</span></a>
       </div>
+    </nav>
 
-      <section>
-        <h2>What it does</h2>
-        <div class="features">
-          <div class="feature">
-            <h3>Three question types</h3>
-            <p>Multiple choice, true/false, and short answer — pick any mix.</p>
+    <!-- HERO -->
+    <header class="wrap" style="padding-top:64px;padding-bottom:40px">
+      <div class="kicker" style="margin-bottom:26px"><span class="dot"></span> Software engineer · web developer</div>
+      <h1 style="font-size:68px;line-height:1.04;max-width:14ch">I build small web tools that <span class="mark">do one thing</span> well.</h1>
+      <p style="font-size:19px;line-height:1.55;color:var(--muted);max-width:52ch;margin-top:24px">Hi, I'm Lucy. I design and ship clean, useful interfaces end-to-end. Here's a project I built and shipped — turning a pile of class notes into a real practice exam.</p>
+      <div style="display:flex;gap:14px;margin-top:32px;flex-wrap:wrap">
+        <a class="btn btn-primary" href="project.html">View the case study →</a>
+        <a class="btn btn-ghost" href="https://github.com/lucy-nyc/test-maker" target="_blank" rel="noopener">
+          <svg width="17" height="17" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+          View code
+        </a>
+      </div>
+    </header>
+
+    <!-- FEATURED PROJECT MOCKUP -->
+    <section class="wrap" style="padding-top:24px;padding-bottom:20px">
+      <div class="card" style="border-radius:22px;box-shadow:0 24px 60px -30px rgba(27,26,23,0.28);overflow:hidden">
+        <div style="display:flex;align-items:center;gap:8px;padding:14px 18px;border-bottom:1px solid #f0ede4;background:var(--bg)">
+          <span style="width:11px;height:11px;border-radius:50%;background:var(--line)"></span>
+          <span style="width:11px;height:11px;border-radius:50%;background:var(--line)"></span>
+          <span style="width:11px;height:11px;border-radius:50%;background:var(--line)"></span>
+          <span style="margin-left:12px;font-family:var(--f-mono);font-size:12px;color:var(--faint)">test-maker-murex.vercel.app</span>
+        </div>
+        <div style="display:grid;grid-template-columns:0.92fr 1.08fr">
+          <!-- input side -->
+          <div style="padding:34px 32px;border-right:1px solid #f0ede4">
+            <div style="font-family:var(--f-mono);font-size:11px;letter-spacing:0.08em;text-transform:uppercase;color:var(--faint);margin-bottom:8px">Test Maker</div>
+            <h3 style="font-size:27px;line-height:1.15;margin-bottom:20px">Paste your class material — get a mock test back.</h3>
+            <div style="font-family:var(--f-mono);font-size:11px;letter-spacing:0.04em;text-transform:uppercase;color:var(--muted);margin-bottom:8px;display:flex;justify-content:space-between;align-items:center">Class material <span style="color:var(--accent);text-transform:none;font-weight:500">+ Import PDF</span></div>
+            <div style="background:var(--bg);border:1px solid var(--line);border-radius:10px;padding:14px;font-size:13.5px;line-height:1.6;color:var(--muted);height:118px;overflow:hidden">Photosynthesis converts light energy into chemical energy stored in glucose. The light-dependent reactions occur in the thylakoid membrane, producing ATP and NADPH…</div>
+            <div style="margin-top:20px;font-family:var(--f-mono);font-size:11px;letter-spacing:0.04em;text-transform:uppercase;color:var(--muted);margin-bottom:9px">Difficulty</div>
+            <div style="display:flex;gap:8px">
+              <span style="flex:1;text-align:center;padding:8px;border-radius:8px;border:1px solid var(--line);font-size:13px;color:var(--muted)">Easy</span>
+              <span style="flex:1;text-align:center;padding:8px;border-radius:8px;background:var(--accent);color:#fff;font-size:13px;font-weight:600">Medium</span>
+              <span style="flex:1;text-align:center;padding:8px;border-radius:8px;border:1px solid var(--line);font-size:13px;color:var(--muted)">Hard</span>
+            </div>
+            <div style="margin-top:18px;font-family:var(--f-mono);font-size:11px;letter-spacing:0.04em;text-transform:uppercase;color:var(--muted);margin-bottom:9px">Question types</div>
+            <div style="display:flex;flex-wrap:wrap;gap:8px">
+              <span style="display:flex;align-items:center;gap:7px;padding:7px 12px;border-radius:20px;background:rgba(15,138,79,0.08);font-size:13px;font-weight:500;color:var(--accent)"><span style="width:14px;height:14px;border-radius:4px;background:var(--accent);color:#fff;font-size:10px;display:flex;align-items:center;justify-content:center">✓</span>Multiple choice</span>
+              <span style="display:flex;align-items:center;gap:7px;padding:7px 12px;border-radius:20px;background:rgba(15,138,79,0.08);font-size:13px;font-weight:500;color:var(--accent)"><span style="width:14px;height:14px;border-radius:4px;background:var(--accent);color:#fff;font-size:10px;display:flex;align-items:center;justify-content:center">✓</span>True / False</span>
+              <span style="display:flex;align-items:center;gap:7px;padding:7px 12px;border-radius:20px;border:1px solid var(--line);font-size:13px;color:var(--muted)">Short answer</span>
+            </div>
+            <div style="margin-top:22px;background:var(--ink);color:#fff;text-align:center;padding:12px;border-radius:10px;font-weight:600;font-size:14px">Generate test</div>
           </div>
-          <div class="feature">
-            <h3>You set the shape</h3>
-            <p>Choose how many questions and the difficulty level.</p>
-          </div>
-          <div class="feature">
-            <h3>Grounded in your material</h3>
-            <p>Every question is answerable from the text you paste — no made-up facts.</p>
-          </div>
-          <div class="feature">
-            <h3>Import a PDF</h3>
-            <p>Pull text straight out of a PDF into the material box.</p>
-          </div>
-          <div class="feature">
-            <h3>Answer keys</h3>
-            <p>Show or hide answers with explanations as you study.</p>
-          </div>
-          <div class="feature">
-            <h3>Export to PDF</h3>
-            <p>Download a blank test or a full answer key to print.</p>
+          <!-- output side -->
+          <div style="padding:34px 32px;background:var(--bg)">
+            <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:18px">
+              <div style="font-family:var(--f-mono);font-size:11px;letter-spacing:0.04em;text-transform:uppercase;color:var(--faint)">Generated · 8 questions</div>
+              <span style="font-size:12px;font-weight:600;color:var(--accent)">Export PDF ↓</span>
+            </div>
+            <div class="card" style="border-radius:12px;padding:18px 18px 16px;margin-bottom:12px">
+              <div style="display:flex;gap:9px;margin-bottom:11px"><span style="font-family:var(--f-mono);font-size:12px;font-weight:600;color:var(--accent)">Q1</span><span style="font-size:11px;font-family:var(--f-mono);color:var(--faint);align-self:center">Multiple choice</span></div>
+              <p style="font-size:14.5px;font-weight:600;line-height:1.5;margin-bottom:12px">Where do the light-dependent reactions of photosynthesis take place?</p>
+              <div style="display:flex;flex-direction:column;gap:7px;font-size:13.5px;color:var(--muted)">
+                <div style="padding:9px 12px;border:1px solid var(--line);border-radius:8px">A · The stroma</div>
+                <div style="padding:9px 12px;border:1px solid var(--accent);border-radius:8px;background:rgba(15,138,79,0.07);color:var(--ink);font-weight:600;display:flex;justify-content:space-between">B · The thylakoid membrane <span style="color:var(--accent)">✓</span></div>
+                <div style="padding:9px 12px;border:1px solid var(--line);border-radius:8px">C · The mitochondria</div>
+              </div>
+            </div>
+            <div class="card" style="border-radius:12px;padding:18px;opacity:0.62">
+              <div style="display:flex;gap:9px;margin-bottom:11px"><span style="font-family:var(--f-mono);font-size:12px;font-weight:600;color:var(--accent)">Q2</span><span style="font-size:11px;font-family:var(--f-mono);color:var(--faint);align-self:center">True / False</span></div>
+              <p style="font-size:14.5px;font-weight:600;line-height:1.5">The light-dependent reactions produce ATP and NADPH.</p>
+            </div>
           </div>
         </div>
-      </section>
-    </div>
+      </div>
+    </section>
+
+    <!-- FEATURES -->
+    <section class="wrap" style="padding-top:72px;padding-bottom:24px">
+      <div style="display:flex;align-items:baseline;justify-content:space-between;flex-wrap:wrap;gap:16px;margin-bottom:40px">
+        <h2 style="font-size:40px">What it does</h2>
+        <p style="font-size:16px;color:var(--muted);max-width:40ch">Every feature exists to make a study session faster — and every answer is grounded in the text you paste.</p>
+      </div>
+      <div class="grid-3">
+        <div class="feature card"><div class="ic">✦</div><h3>Three question types</h3><p>Multiple choice, true/false, and short answer — mix and match whatever fits the material.</p></div>
+        <div class="feature card"><div class="ic">⟐</div><h3>You set the shape</h3><p>Choose how many questions to generate and how hard they should be.</p></div>
+        <div class="feature card"><div class="ic">◎</div><h3>Grounded in your text</h3><p>Every question is answerable from what you pasted. No invented facts, no hallucinations.</p></div>
+        <div class="feature card"><div class="ic">⇪</div><h3>Import a PDF</h3><p>Pull text straight out of a lecture PDF into the material box in one click.</p></div>
+        <div class="feature card"><div class="ic">✓</div><h3>Answer keys</h3><p>Reveal or hide answers with short explanations as you work through the test.</p></div>
+        <div class="feature card"><div class="ic">↓</div><h3>Export to PDF</h3><p>Download a clean blank test, or a full answer key, ready to print and study.</p></div>
+      </div>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section class="wrap" style="padding-top:64px;padding-bottom:64px">
+      <h2 style="font-size:40px;margin-bottom:40px">Three steps</h2>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line)">
+        <div style="padding:28px 26px 30px;border-right:1px solid var(--line)"><div class="serif-i" style="font-family:var(--f-display);font-size:34px;color:var(--accent);margin-bottom:14px">01</div><h3 style="font-family:var(--f-body);font-size:17px;font-weight:700;margin-bottom:8px">Paste your material</h3><p style="font-size:14.5px;line-height:1.55;color:var(--muted)">Drop in notes, a chapter, or a study guide — or import it straight from a PDF.</p></div>
+        <div style="padding:28px 26px 30px;border-right:1px solid var(--line)"><div class="serif-i" style="font-family:var(--f-display);font-size:34px;color:var(--accent);margin-bottom:14px">02</div><h3 style="font-family:var(--f-body);font-size:17px;font-weight:700;margin-bottom:8px">Pick the format</h3><p style="font-size:14.5px;line-height:1.55;color:var(--muted)">Set difficulty, question count, and which question types you want.</p></div>
+        <div style="padding:28px 26px 30px"><div class="serif-i" style="font-family:var(--f-display);font-size:34px;color:var(--accent);margin-bottom:14px">03</div><h3 style="font-family:var(--f-body);font-size:17px;font-weight:700;margin-bottom:8px">Study & export</h3><p style="font-size:14.5px;line-height:1.55;color:var(--muted)">Work through the test, check the answer key, then export a printable copy.</p></div>
+      </div>
+    </section>
+
+    <!-- CTA / CONTACT -->
+    <section class="wrap" style="padding-top:24px;padding-bottom:96px">
+      <div class="cta-block">
+        <div class="orb"></div>
+        <h2 style="font-size:46px;line-height:1.08;max-width:16ch;position:relative">Try it yourself, or take a look under the hood.</h2>
+        <div style="display:flex;gap:14px;margin-top:30px;flex-wrap:wrap;position:relative">
+          <a class="btn btn-primary" href="https://test-maker-murex.vercel.app/" target="_blank" rel="noopener">Open the live demo <span>↗</span></a>
+          <a class="btn" style="background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.16);color:var(--bg)" href="https://github.com/lucy-nyc/test-maker" target="_blank" rel="noopener">View the code</a>
+        </div>
+        <div style="display:flex;gap:26px;margin-top:46px;padding-top:30px;border-top:1px solid rgba(255,255,255,0.12);flex-wrap:wrap;font-size:14.5px;position:relative">
+          <a href="mailto:lucy@example.com" style="color:var(--bg);opacity:0.78">lucy@example.com</a>
+          <a href="https://github.com/lucy-nyc" target="_blank" rel="noopener" style="color:var(--bg);opacity:0.78">github.com/lucy-nyc</a>
+          <a href="about.html" style="color:var(--bg);opacity:0.78">More about me →</a>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <span>© 2026 Lucy Yang</span>
+      <span class="mono">Designed &amp; built by hand</span>
+    </footer>
   </body>
 </html>

@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Test Maker — Case Study · Lucy Yang</title>
+    <meta name="description" content="Case study: Test Maker turns class notes into a grounded practice exam. Built with vanilla JS, Node/Express, the Gemini API, pdf.js and jsPDF." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="site.css" />
+  </head>
+  <body>
+    <nav class="nav">
+      <a class="brand" href="index.html"><span class="brand-mark">L</span><b>Lucy Yang</b></a>
+      <div class="nav-links">
+        <a href="project.html" class="active">Work</a>
+        <a href="about.html">About</a>
+        <a class="cta" href="https://test-maker-murex.vercel.app/" target="_blank" rel="noopener">Live demo <span style="font-size:12px">↗</span></a>
+      </div>
+    </nav>
+
+    <!-- HEADER -->
+    <header class="wrap" style="padding-top:48px;padding-bottom:36px">
+      <a href="index.html" style="font-family:var(--f-mono);font-size:13px;color:var(--muted);display:inline-block;margin-bottom:28px">← Back to home</a>
+      <div class="eyebrow" style="margin-bottom:16px">Case study · Web app</div>
+      <h1 style="font-size:60px;line-height:1.04;margin-bottom:20px">Test Maker</h1>
+      <p style="font-size:20px;line-height:1.5;color:var(--muted);max-width:54ch">A study tool that turns a wall of class notes into a real practice exam — multiple choice, true/false, and short answer, with every question grounded strictly in the material you paste.</p>
+      <div style="display:flex;gap:14px;margin-top:30px;flex-wrap:wrap">
+        <a class="btn btn-primary" href="https://test-maker-murex.vercel.app/" target="_blank" rel="noopener">Open the live demo <span>↗</span></a>
+        <a class="btn btn-ghost" href="https://github.com/lucy-nyc/test-maker" target="_blank" rel="noopener">View the code</a>
+      </div>
+      <div style="display:flex;flex-wrap:wrap;gap:40px;margin-top:44px;padding-top:28px;border-top:1px solid var(--line)">
+        <div><div class="eyebrow mute" style="font-size:11px;margin-bottom:6px">Role</div><div style="font-size:15px;font-weight:600">Design &amp; build (solo)</div></div>
+        <div><div class="eyebrow mute" style="font-size:11px;margin-bottom:6px">Type</div><div style="font-size:15px;font-weight:600">Web app</div></div>
+        <div><div class="eyebrow mute" style="font-size:11px;margin-bottom:6px">Status</div><div style="font-size:15px;font-weight:600">Live in production</div></div>
+        <div><div class="eyebrow mute" style="font-size:11px;margin-bottom:6px">Year</div><div style="font-size:15px;font-weight:600">2026</div></div>
+      </div>
+    </header>
+
+    <!-- DEMO VIDEO -->
+    <section class="wrap" style="padding-top:16px;padding-bottom:8px">
+      <div class="card" style="border-radius:18px;padding:14px;box-shadow:0 24px 60px -30px rgba(27,26,23,0.28)">
+        <video controls preload="metadata" playsinline style="width:100%;border-radius:11px">
+          <source src="demo.mp4" type="video/mp4" />
+          Your browser can't play this video. <a href="demo.mp4">Download it instead.</a>
+        </video>
+      </div>
+      <div style="font-family:var(--f-mono);font-size:12px;color:var(--faint);margin-top:12px;text-align:center">A 30-second walkthrough — paste material, generate a test, reveal the answer key, export to PDF.</div>
+    </section>
+
+    <!-- THE PROBLEM -->
+    <section class="wrap narrow" style="padding-top:72px">
+      <div class="eyebrow" style="margin-bottom:18px">01 · The problem</div>
+      <h2 style="font-size:36px;line-height:1.12;margin-bottom:22px">Re-reading notes isn't studying. Testing yourself is.</h2>
+      <p style="font-size:18px;line-height:1.65;color:var(--ink-2);margin-bottom:18px">The most effective way to study is active recall — quizzing yourself instead of passively re-reading. But writing your own practice questions is slow, and generic quiz generators tend to <span class="mark thin" style="font-weight:600">invent facts</span> that were never in your material.</p>
+      <p style="font-size:18px;line-height:1.65;color:var(--ink-2)">Test Maker fixes both: it writes the questions for you in seconds, and it constrains every single one to be answerable from the exact text you paste — so a practice test never quizzes you on something your professor never covered.</p>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section class="wrap" style="padding-top:72px">
+      <div class="narrow" style="margin-bottom:40px">
+        <div class="eyebrow" style="margin-bottom:18px">02 · How it works</div>
+        <h2 style="font-size:36px;line-height:1.12">From a paragraph of notes to a printable exam.</h2>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:14px">
+        <div class="card" style="padding:24px 22px 26px"><div class="serif-i" style="font-family:var(--f-display);font-size:30px;color:var(--accent);margin-bottom:14px">01</div><h3 style="font-family:var(--f-body);font-size:16px;font-weight:700;margin-bottom:8px">Paste or import</h3><p style="font-size:14px;line-height:1.55;color:var(--muted)">Drop in notes by hand, or pull text straight out of a lecture PDF.</p></div>
+        <div class="card" style="padding:24px 22px 26px"><div class="serif-i" style="font-family:var(--f-display);font-size:30px;color:var(--accent);margin-bottom:14px">02</div><h3 style="font-family:var(--f-body);font-size:16px;font-weight:700;margin-bottom:8px">Choose the shape</h3><p style="font-size:14px;line-height:1.55;color:var(--muted)">Pick difficulty, how many questions, and which of the three types.</p></div>
+        <div class="card" style="padding:24px 22px 26px"><div class="serif-i" style="font-family:var(--f-display);font-size:30px;color:var(--accent);margin-bottom:14px">03</div><h3 style="font-family:var(--f-body);font-size:16px;font-weight:700;margin-bottom:8px">Generate</h3><p style="font-size:14px;line-height:1.55;color:var(--muted)">A grounded test is written in seconds — every answer traceable to your text.</p></div>
+        <div class="card" style="padding:24px 22px 26px"><div class="serif-i" style="font-family:var(--f-display);font-size:30px;color:var(--accent);margin-bottom:14px">04</div><h3 style="font-family:var(--f-body);font-size:16px;font-weight:700;margin-bottom:8px">Study &amp; export</h3><p style="font-size:14px;line-height:1.55;color:var(--muted)">Toggle the answer key, then export a blank test or full key as PDF.</p></div>
+      </div>
+    </section>
+
+    <!-- DETAILS + TECH -->
+    <section class="wrap" style="padding-top:80px;display:grid;grid-template-columns:1.3fr 1fr;gap:56px">
+      <div>
+        <div class="eyebrow" style="margin-bottom:18px">03 · The details</div>
+        <h2 style="font-size:32px;line-height:1.12;margin-bottom:24px">Built for a real study session</h2>
+        <div>
+          <div style="display:flex;gap:16px;padding:16px 0;border-bottom:1px solid var(--line)"><span style="color:var(--accent);font-weight:700;font-size:15px;margin-top:1px">✓</span><div><div style="font-size:16px;font-weight:700;margin-bottom:3px">Three question formats</div><div style="font-size:14.5px;line-height:1.5;color:var(--muted)">Multiple choice, true/false, and short answer — combined in any mix you choose.</div></div></div>
+          <div style="display:flex;gap:16px;padding:16px 0;border-bottom:1px solid var(--line)"><span style="color:var(--accent);font-weight:700;font-size:15px;margin-top:1px">✓</span><div><div style="font-size:16px;font-weight:700;margin-bottom:3px">Strictly grounded generation</div><div style="font-size:14.5px;line-height:1.5;color:var(--muted)">Questions are constrained to the pasted material via structured JSON output, so the test never invents facts.</div></div></div>
+          <div style="display:flex;gap:16px;padding:16px 0;border-bottom:1px solid var(--line)"><span style="color:var(--accent);font-weight:700;font-size:15px;margin-top:1px">✓</span><div><div style="font-size:16px;font-weight:700;margin-bottom:3px">Client-side PDF import</div><div style="font-size:14.5px;line-height:1.5;color:var(--muted)">Reads text out of an uploaded PDF in the browser with pdf.js, straight into the material box.</div></div></div>
+          <div style="display:flex;gap:16px;padding:16px 0;border-bottom:1px solid var(--line)"><span style="color:var(--accent);font-weight:700;font-size:15px;margin-top:1px">✓</span><div><div style="font-size:16px;font-weight:700;margin-bottom:3px">Answer keys with explanations</div><div style="font-size:14.5px;line-height:1.5;color:var(--muted)">Reveal or hide answers as you go, each with a short why-this-is-right note.</div></div></div>
+          <div style="display:flex;gap:16px;padding:16px 0;border-bottom:1px solid var(--line)"><span style="color:var(--accent);font-weight:700;font-size:15px;margin-top:1px">✓</span><div><div style="font-size:16px;font-weight:700;margin-bottom:3px">Print-ready PDF export</div><div style="font-size:14.5px;line-height:1.5;color:var(--muted)">Generate a clean blank test for practice, or a full answer key, with jsPDF.</div></div></div>
+        </div>
+      </div>
+      <div>
+        <div class="eyebrow mute" style="margin-bottom:18px">Built with</div>
+        <div style="display:flex;flex-wrap:wrap;gap:9px;margin-bottom:36px">
+          <span class="tag">JavaScript</span><span class="tag">HTML / CSS</span><span class="tag">Node.js</span><span class="tag">Express</span><span class="tag">Gemini API</span><span class="tag">pdf.js</span><span class="tag">jsPDF</span><span class="tag">Vercel</span>
+        </div>
+        <div class="card" style="padding:24px">
+          <div class="eyebrow mute" style="margin-bottom:14px">Notable engineering</div>
+          <ul style="list-style:none;display:flex;flex-direction:column;gap:11px">
+            <li style="font-size:14.5px;line-height:1.45;color:var(--ink-2);display:flex;gap:10px"><span style="color:var(--accent)">→</span><span>API key stays server-side; the browser only talks to a serverless <code>/api/generate</code>.</span></li>
+            <li style="font-size:14.5px;line-height:1.45;color:var(--ink-2);display:flex;gap:10px"><span style="color:var(--accent)">→</span><span>Structured outputs enforce a strict question schema the UI can render directly.</span></li>
+            <li style="font-size:14.5px;line-height:1.45;color:var(--ink-2);display:flex;gap:10px"><span style="color:var(--accent)">→</span><span>Input sanitising strips problem characters from PDFs so requests don't break.</span></li>
+          </ul>
+        </div>
+        <div class="card" style="padding:24px;margin-top:18px">
+          <div class="eyebrow mute" style="margin-bottom:14px">What I'd build next</div>
+          <ul style="list-style:none;display:flex;flex-direction:column;gap:11px">
+            <li style="font-size:14.5px;line-height:1.45;color:var(--ink-2);display:flex;gap:10px"><span style="color:var(--accent)">→</span><span>Save and revisit past tests across sessions.</span></li>
+            <li style="font-size:14.5px;line-height:1.45;color:var(--ink-2);display:flex;gap:10px"><span style="color:var(--accent)">→</span><span>Spaced-repetition mode that resurfaces missed questions.</span></li>
+            <li style="font-size:14.5px;line-height:1.45;color:var(--ink-2);display:flex;gap:10px"><span style="color:var(--accent)">→</span><span>Shareable test links for study groups.</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="wrap" style="padding-top:80px;padding-bottom:96px">
+      <div class="cta-block" style="padding:56px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:28px">
+        <div>
+          <h2 style="font-size:38px;line-height:1.08">See it in action.</h2>
+          <p style="font-size:16px;color:rgba(252,251,248,0.7);margin-top:10px;max-width:40ch">The fastest way to understand Test Maker is to paste in some notes and generate a test.</p>
+        </div>
+        <div style="display:flex;gap:14px;flex-wrap:wrap">
+          <a class="btn btn-primary" href="https://test-maker-murex.vercel.app/" target="_blank" rel="noopener">Live demo <span>↗</span></a>
+          <a class="btn" style="background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.16);color:var(--bg)" href="https://github.com/lucy-nyc/test-maker" target="_blank" rel="noopener">Code</a>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <a href="index.html">© 2026 Lucy Yang</a>
+      <a href="about.html" class="mono">About me →</a>
+    </footer>
+  </body>
+</html>
